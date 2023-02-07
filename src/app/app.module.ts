@@ -1,14 +1,26 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+//modulo para la comunicación Http - Comunicacion con servicios-apis
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { TarjetaCreditoComponent } from './components/tarjeta-credito/tarjeta-credito.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TarjetaCreditoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
+    //se importa el modulo de comunicacion Http
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
