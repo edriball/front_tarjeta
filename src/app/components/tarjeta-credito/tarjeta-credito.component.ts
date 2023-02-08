@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
-import { Tarjeta } from 'src/app/services/Tarjeta';
 import { TarjetaService } from 'src/app/services/tarjeta.service';
 
 @Component({

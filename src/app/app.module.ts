@@ -5,14 +5,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 //modulo para la comunicación Http - Comunicacion con servicios-apis
 import { HttpClientModule } from '@angular/common/http';
-
+//importar modulo para routing
+import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from './app.component';
 import { TarjetaCreditoComponent } from './components/tarjeta-credito/tarjeta-credito.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TarjetaCreditoComponent
+    TarjetaCreditoComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,6 +22,7 @@ import { TarjetaCreditoComponent } from './components/tarjeta-credito/tarjeta-cr
     ToastrModule.forRoot(), // ToastrModule added
     //se importa el modulo de comunicacion Http
     HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
