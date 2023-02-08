@@ -11,27 +11,28 @@ import { PlaceholderService } from 'src/app/services/placeholders/placeholder.se
 })
 export class ListPlaceholdersComponent implements OnInit {
   User: any;
+  Comments: any;
   form: FormGroup;
+  //paginación
+  p: number = 1;
 
   constructor(
     private fb: FormBuilder,
     private toastr: ToastrService,
     private _PlaceholderService: PlaceholderService,
   ) {
-    this.form = this.fb.group({
-      id: [''],
-      name:[''],
-      username: [''],
-      email: [''],
-      address: ['']
-    });
+    this.form = this.fb.group({});
   }
 
   ngOnInit(): void {
-    this._PlaceholderService.getUSers().subscribe(respuesta => {
+    this._PlaceholderService.getUsers().subscribe(respuesta => {
       console.log(respuesta);
       this.User = respuesta;
-      this.toastr.success("Se cargaron los registros correctamente", "Carga de registros");
+    });
+
+    this._PlaceholderService.getComments().subscribe(respuesta => {
+      console.log(respuesta);
+      this.Comments = respuesta;
     });
   }
 }

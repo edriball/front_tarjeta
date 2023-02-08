@@ -30,4 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ng add angular-cli-ghpages
 
 ## Compilar el proyecto para desplegarlo en git
-ng deploy --base-href=https://edriball121.github.io/CrudAngular_develoteca/
+ng deploy --base-href=https://edriball121.github.io/FrontTarjeta/
