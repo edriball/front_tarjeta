@@ -9,11 +9,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from './app.component';
 import { TarjetaCreditoComponent } from './components/tarjeta-credito/tarjeta-credito.component';
+import { ListPlaceholdersComponent } from './components/place-holder/list-placeholders/list-placeholders.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TarjetaCreditoComponent,
+    ListPlaceholdersComponent,
   ],
   imports: [
     BrowserModule,
